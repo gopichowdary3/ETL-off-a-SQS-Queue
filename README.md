@@ -17,7 +17,7 @@ Now install boto3 using :  pip3 install boto3 psycopg2-binary
 
 Step 5: 
 [ec2-user@ip-172-31-81-23 ~]$ aws configure
-AWS Access Key ID [None]: xxxxxxxxxxxxxxxxxx
+AWS Access Key ID [None]: xxxxxxxxxxxxxxxxx
 AWS Secret Access Key [None]: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Default region name [your_region_name]: us-east-1
 Default output format [None]: json
