@@ -88,11 +88,11 @@ The error I encountered came from trying to insert a string where PostgreSQL exp
 In our SQL insert statement, one of your variables is being inserted as a string when it's meant to be an integer. 
 The specific error was caused by trying to insert the string "2.3.0" into an integer field. 
 From our logs, it appears that "2.3.0" corresponds to app_version.
-It looks like app_version is a string representing version numbers and not an integer.
+It looks like app_version was a string representing version numbers and not an integer.
 
 If app_version is indeed supposed to be a string, change the datatype of this field in your database to text or varchar.
 To alter the datatype of a column in a PostgreSQL table, you can use the ALTER TABLE command. 
 
-For this go to psql service using : docker exec -it <container_id_or_name> psql -U postgres
+For this go to psql service using : docker exec -it <container_id_or_name> psql -U postgres.
 Now execute the following command using psql : ALTER TABLE user_logins ALTER COLUMN app_version TYPE VARCHAR;
 
